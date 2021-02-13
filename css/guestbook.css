@@ -1,0 +1,114 @@
+/**
+ * the following 2 sets of rules should be removed for live usage
+ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 40em;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+/* guestbook form */
+.gbform {
+  max-width: 400px;
+  width: 100%;
+  margin: 0;
+}
+.gbform label {
+  display: block;
+  margin-bottom: .2em;
+}
+.gbform input, 
+.gbform textarea {
+  font: inherit;
+  padding: .25em 0;
+  width: 100%;
+}
+.gbform textarea {
+  height: 5em;
+}
+.gbform input[type="checkbox"] {
+  width: auto;
+}
+.gbform input:focus, 
+.gbform textarea:focus {
+  background-color: #faf9fc;
+}
+.gbform input[type="submit"] {
+  background-color: #A61E10;
+  border-color: #A61E10;
+  color: white;
+  cursor: pointer;
+  transition: background-color .6s ease-in-out;
+}
+.gbform input[type="submit"]:hover,
+.gbform input[type="submit"]:focus {
+  background-color: #77160C;
+}
+.gbform input[type="submit"]:disabled {
+  background-color: #898989;
+  cursor: not-allowed;
+}
+
+.field {
+  margin-bottom: .3em;
+}
+.consent {
+  clear: both;
+  margin-bottom: 1em;
+}
+.consent label {
+  display: inline;
+}
+.error,
+.field.error label {
+  color: #cc3333;
+}
+.field.error input,
+.field.error textarea {
+  border-color: #cc3333;
+  background-color: #ffeded;
+}
+
+/* guestbook entries */
+.gbentry {
+  padding-bottom: .5rem;
+}
+.gbcomment {
+  padding-bottom: .5rem;
+}
+.gbauthor {
+  font-size: 86%;
+  color: #666;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid #999;
+}
+.gbauthor::before {
+  content: 'From ';
+}
+.gbauthor span::before {
+  content: ' on ';
+}
+
+.more {
+  text-align: center;
+}
+.more a {
+  text-decoration: none;
+  background-color: #fdd;
+}
+.more a,
+.more span {
+  padding: .15em .35em;
+}
+.more a:hover,
+.more a:focus {
+  background-color: #ddf;
+}
+.more span {
+  color: #999;
+}
